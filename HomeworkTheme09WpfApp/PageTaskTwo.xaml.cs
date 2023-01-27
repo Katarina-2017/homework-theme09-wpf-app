@@ -16,24 +16,13 @@ using System.Windows.Shapes;
 namespace HomeworkTheme09WpfApp
 {
     /// <summary>
-    /// Логика взаимодействия для MainWindow.xaml
+    /// Логика взаимодействия для PageTaskTwo.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class PageTaskTwo : Page
     {
-        PageTaskOne pageTaskOne;
-        PageTaskTwo pageTaskTwo;
-        
-        public MainWindow()
+        public PageTaskTwo()
         {
             InitializeComponent();
-
-            pageTaskOne= new PageTaskOne();
-            pageTaskTwo= new PageTaskTwo();
-        }
-
-        private void BtnTaskOne_Click(object sender, RoutedEventArgs e)
-        {
-            MainFrame.Content = pageTaskOne;
         }
     }
 }

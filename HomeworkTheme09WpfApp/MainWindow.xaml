@@ -5,8 +5,34 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:HomeworkTheme09WpfApp"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid>
-        
+        Title="Работа со строками" 
+        Height="600" 
+        Width="800"
+        MinHeight="500"
+        MinWidth="750"
+        WindowStartupLocation="CenterScreen">
+    <Grid Margin="10">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="100"/>
+            <ColumnDefinition Width="100"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Button Style="{StaticResource buttonResourse}"
+                x:Name="btnTaskOne" 
+                Content="Задание 1" Click="BtnTaskOne_Click"/>
+        <Button Style="{StaticResource buttonResourse}"
+                x:Name="btnTaskTwo"  
+                Grid.Column="1" 
+                Content="Задание 2"/>
+        <Frame x:Name="MainFrame"
+               NavigationUIVisibility="Automatic"
+               VerticalAlignment="Stretch"
+               HorizontalAlignment="Stretch"
+               Grid.Row="1" Grid.ColumnSpan="3"/>
+
     </Grid>
 </Window>
