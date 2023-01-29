@@ -25,6 +25,11 @@ namespace HomeworkTheme09WpfApp
             InitializeComponent();
         }
 
+        /// <summary>
+        /// Метод, который меняет цвет и стиль шрифта при получении фокуса
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void TbUserInputStringTwo_GotFocus(object sender, RoutedEventArgs e)
         {
             string startString = tbUserInputStringTwo.Text;
@@ -42,13 +47,23 @@ namespace HomeworkTheme09WpfApp
             }
         }
 
+        /// <summary>
+        /// Метод, который выводит строку в обратной последовательности в компоненте Label
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void BtnReversWordsIntoString_Click(object sender, RoutedEventArgs e)
         {
             string userString = tbUserInputStringTwo.Text;
-            lblReversString.Content= "Получившееся предложение:"+Environment.NewLine + ReversWords(userString);
+            lblReversString.Content= "Получившееся предложение:" + Environment.NewLine + ReversWords(userString);
 
         }
 
+        /// <summary>
+        /// Метод, который меняет слова в предложении местами (в обратной последовательности)
+        /// </summary>
+        /// <param name="inputPhrase">Введенная пользователем строка</param>
+        /// <returns></returns>
         static string ReversWords(string inputPhrase)
         {
             string[] resultArray =  PageTaskOne.SplitStringIntoWords(inputPhrase);
