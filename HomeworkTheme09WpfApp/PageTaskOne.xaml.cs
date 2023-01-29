@@ -64,7 +64,7 @@ namespace HomeworkTheme09WpfApp
         /// </summary>
         /// <param name="inputString">Введенная пользователем строка</param>
         /// <returns></returns>
-        static string[] SplitStringIntoWords(string inputString)
+        public static string[] SplitStringIntoWords(string inputString)
         {
             string[] resultArray = inputString.Split(' ');
             return resultArray;

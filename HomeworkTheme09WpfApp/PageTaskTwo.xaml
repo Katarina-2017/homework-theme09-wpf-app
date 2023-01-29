@@ -9,6 +9,29 @@
       Title="PageTaskTwo">
 
     <Grid>
-        
+        <TextBox Style="{StaticResource textBoxResourse}"
+            x:Name="tbUserInputStringTwo"
+            HorizontalAlignment="Left" 
+            Height="30" 
+            Margin="52,68,0,0" 
+            Text="Введите предложение" 
+            TextWrapping="Wrap" 
+            VerticalAlignment="Top" 
+            Width="639" GotFocus="TbUserInputStringTwo_GotFocus"/>
+        <Button Style="{StaticResource buttonResourse}"
+            x:Name="btnReversWordsIntoString"
+            Content="Переставить слова &#xa;     в предложении" 
+            HorizontalAlignment="Left" 
+            Margin="262,139,0,0" 
+            VerticalAlignment="Top" 
+            Width="200" 
+            RenderTransformOrigin="2.309,0.155" 
+            Height="49" Click="BtnReversWordsIntoString_Click"/>
+        <Label  x:Name="lblReversString"
+            Content="Получившееся предложение:" 
+            Margin="52,210,109,175" 
+            VerticalAlignment="Stretch"
+            />
+
     </Grid>
 </Page>

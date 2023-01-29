@@ -35,5 +35,10 @@ namespace HomeworkTheme09WpfApp
         {
             MainFrame.Content = pageTaskOne;
         }
+
+        private void BtnTaskTwo_Click(object sender, RoutedEventArgs e)
+        {
+            MainFrame.Content = pageTaskTwo;
+        }
     }
 }

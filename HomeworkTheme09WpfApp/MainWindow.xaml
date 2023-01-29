@@ -27,7 +27,7 @@
         <Button Style="{StaticResource buttonResourse}"
                 x:Name="btnTaskTwo"  
                 Grid.Column="1" 
-                Content="Задание 2"/>
+                Content="Задание 2" Margin="0,-10,0,10" VerticalAlignment="Bottom" Click="BtnTaskTwo_Click"/>
         <Frame x:Name="MainFrame"
                NavigationUIVisibility="Automatic"
                VerticalAlignment="Stretch"

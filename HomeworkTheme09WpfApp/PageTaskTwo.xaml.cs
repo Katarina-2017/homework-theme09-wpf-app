@@ -24,5 +24,41 @@ namespace HomeworkTheme09WpfApp
         {
             InitializeComponent();
         }
+
+        private void TbUserInputStringTwo_GotFocus(object sender, RoutedEventArgs e)
+        {
+            string startString = tbUserInputStringTwo.Text;
+            if (startString == "Введите предложение")
+            {
+                tbUserInputStringTwo.Foreground = Brushes.Black;
+                tbUserInputStringTwo.FontStyle = FontStyles.Normal;
+                tbUserInputStringTwo.Text = "";
+            }
+            else
+            {
+                tbUserInputStringTwo.Foreground = Brushes.Black;
+                tbUserInputStringTwo.FontStyle = FontStyles.Normal;
+                tbUserInputStringTwo.Text = "";
+            }
+        }
+
+        private void BtnReversWordsIntoString_Click(object sender, RoutedEventArgs e)
+        {
+            string userString = tbUserInputStringTwo.Text;
+            lblReversString.Content= "Получившееся предложение:"+Environment.NewLine + ReversWords(userString);
+
+        }
+
+        static string ReversWords(string inputPhrase)
+        {
+            string[] resultArray =  PageTaskOne.SplitStringIntoWords(inputPhrase);
+            string resultString = "";
+            for (int i = resultArray.Length - 1; i >= 0; i--)
+            {
+                resultString += resultArray[i] + " ";
+            }
+
+            return resultString;
+        }
     }
 }
